@@ -1,0 +1,33 @@
+{
+  "name": "json-key-path-list",
+  "version": "1.0.0",
+  "description": "Get json key path list",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "json",
+    "key",
+    "path",
+    "array",
+    "object"
+  ],
+  "author": {
+    "name": "Larry",
+    "email": "larryteal@163.com"
+  },
+  "bugs": {
+    "url": "https://github.com/larryteal/json-key-path-list/issues"
+  },
+  "homepage": "https://github.com/larryteal/json-key-path-list",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larryteal/json-key-path-list"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0"
+  }
+}
