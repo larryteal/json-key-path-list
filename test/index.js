@@ -1,9 +1,9 @@
 const expect = require('chai').expect;
 
-const jsonKeyPath = require('../index');
+const jsonKeyPathList = require('../index');
 
 
-describe('json key path', function () {
+describe('json key path list', function () {
   it('should be able to get json key path list', function () {
     const obj = {
       foo: 'foov',
@@ -20,7 +20,7 @@ describe('json key path', function () {
         d: 'd2'
       }]
     };
-    const keyPath = jsonKeyPath(obj);
+    const keyPath = jsonKeyPathList(obj);
     expect(keyPath).to.deep.equal([
       'foo',
       'bar.b',
@@ -35,37 +35,37 @@ describe('json key path', function () {
 
   it('should be no error when params is null', function () {
     const obj = null;
-    const keyPath = jsonKeyPath(obj);
+    const keyPath = jsonKeyPathList(obj);
     expect(keyPath).to.deep.equal([]);
   });
 
   it('should be no error when params is undefined', function () {
     const obj = undefined;
-    const keyPath = jsonKeyPath(obj);
+    const keyPath = jsonKeyPathList(obj);
     expect(keyPath).to.deep.equal([]);
   });
 
   it('should be no error when params is string', function () {
     const obj = 'string';
-    const keyPath = jsonKeyPath(obj);
+    const keyPath = jsonKeyPathList(obj);
     expect(keyPath).to.deep.equal([]);
   });
 
   it('should be no error when params is number', function () {
     const obj = 1;
-    const keyPath = jsonKeyPath(obj);
+    const keyPath = jsonKeyPathList(obj);
     expect(keyPath).to.deep.equal([]);
   });
 
   it('should be no error when params is function', function () {
     const obj = function () {};
-    const keyPath = jsonKeyPath(obj);
+    const keyPath = jsonKeyPathList(obj);
     expect(keyPath).to.deep.equal([]);
   });
 
   it('should be no error when params is boolean', function () {
     const obj = true;
-    const keyPath = jsonKeyPath(obj);
+    const keyPath = jsonKeyPathList(obj);
     expect(keyPath).to.deep.equal([]);
   });
 });

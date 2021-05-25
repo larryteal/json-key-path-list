@@ -1,4 +1,4 @@
-module.exports = jsonKeyPath;
+module.exports = jsonKeyPathList;
 
 function isObject(obj) {
  const type = Object.prototype.toString.call(obj);
@@ -8,7 +8,7 @@ function isObject(obj) {
  return false;
 }
 
-function jsonKeyPath(obj) {
+function jsonKeyPathList(obj) {
   if (!isObject(obj)) {
     return [];
   }
@@ -16,7 +16,7 @@ function jsonKeyPath(obj) {
   const keyPath = [];
   keys.forEach(key => {
     const item = obj[key];
-    const subKeyPath = jsonKeyPath(item);
+    const subKeyPath = jsonKeyPathList(item);
     if (subKeyPath.length > 0) {
       subKeyPath.forEach(sp => {
         keyPath.push(`${key}.${sp}`);
